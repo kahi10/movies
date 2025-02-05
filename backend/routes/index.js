@@ -7,7 +7,7 @@ router.get('/movies', (req, res) => {
     fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${OWM_API_KEY}`)
       .then(response => response.json())
       .then(data => {
-        res.json({ movies: data });
+        res.json({ movies: data.results});
       });
    });
 
